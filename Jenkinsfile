@@ -28,6 +28,8 @@ pipeline {
                 script {
                     // Deploy the frontend with the specified port for Jenkins
                     sh """
+                    docker-compose -p ${PROJECT_NAME} -f ${COMPOSE_FILE} down
+                    
                     FRONTEND_PORT=${FRONTEND_PORT} \
                     BACKEND_PORT=${BACKEND_PORT} \
                     docker-compose -p ${PROJECT_NAME} -f ${COMPOSE_FILE} up -d
