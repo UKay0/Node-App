@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/AmnaKhan2003/Note-App'  // Replace with your GitHub repo URL
+                git branch: 'main', url: 'https://github.com/UKay0/Node-App'
             }
         }
         
