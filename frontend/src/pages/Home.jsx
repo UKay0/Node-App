@@ -25,7 +25,7 @@ function Home() {
 
     try{
 
-      const {data} = await axios.get(`${process.env.API_URL}/api/note`,{
+      const {data} = await axios.get(`http://54.234.164.178:5000/api/note`,{
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
       
@@ -53,7 +53,7 @@ function Home() {
   const addNote = async(title,description)=>{
     
     try{
-                 const response = await axios.post(`${process.env.API_URL}/api/note/add`, {
+                 const response = await axios.post(`http://54.234.164.178:5000/api/note/add`, {
                     title,
                     description,
                  }, {
@@ -78,7 +78,7 @@ function Home() {
 
   const editNote = async (id, title, description)=>{
     try{
-      const response = await axios.put(`${process.env.API_URL}/api/note/${id}`, {
+      const response = await axios.put(`http://54.234.164.178:5000/api/note/${id}`, {
          title,
          description,
       }, {
@@ -104,7 +104,7 @@ function Home() {
 
   const deleteNote = async (id)=>{
     try{
-      const response = await axios.delete(`${process.env.API_URL}/api/note/${id}`,{
+      const response = await axios.delete(`http://54.234.164.178:5000/api/note/${id}`,{
          headers: {
              Authorization: `Bearer ${localStorage.getItem("token")}`,
          
