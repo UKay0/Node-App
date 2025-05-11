@@ -10,7 +10,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try{
-            const response = await axios.post(`${process.env.API_URL}/api/auth/signup`, {
+            const response = await axios.post(`http://54.234.164.178:5000/api/auth/signup`, {
                 name,
                 email,
                 password
