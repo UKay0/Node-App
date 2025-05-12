@@ -21,7 +21,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "${FRONTEND_PORT:-3000}:3000"
+      - "${FRONTEND_PORT:-3000}:80"
     volumes:
       - ./frontend:/usr/share/nginx/html
       - frontend_build:/usr/share/nginx/html
