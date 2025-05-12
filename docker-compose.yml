@@ -30,7 +30,7 @@ services:
     container_name: noteapp-mongo-build
     image: mongo:6
     ports:
-      - "27018:27017"
+      - "${MONGO_PORT:-27017}:27017"
     volumes:
       - mongo_data_build:/data/db
 
