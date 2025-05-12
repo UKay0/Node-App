@@ -3,7 +3,7 @@ pipeline {
     environment {
         // Fixed port for Jenkins frontend deployment
         FRONTEND_PORT = '5001'  // Port for frontend on Jenkins deployment
-        BACKEND_PORT  = '5000'
+        BACKEND_PORT  = '5002'
         COMPOSE_FILE = 'docker-compose.yml'  // Location of your compose file
         PROJECT_NAME = 'frontendproject'  // Project name for the Docker Compose deployment
     }
